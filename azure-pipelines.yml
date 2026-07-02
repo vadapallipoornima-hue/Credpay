@@ -5,9 +5,9 @@ pool:
 variables:
   acrserviceconnection: cred-ACR
   tag: '$(Build.BuildId)'
-  frontendrepo: 'Credpay/frontend'
-  paymentrepo: 'Credpay/payment'
-  userrepo: 'Credpay/user'
+  frontendrepo: 'credpay/frontend'
+  paymentrepo: 'credpay/payment'
+  userrepo: 'credpay/user'
 
 stages:
   - stage: DockerBuild
