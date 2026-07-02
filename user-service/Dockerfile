@@ -3,7 +3,8 @@ WORKDIR /build
 COPY pom.xml .
 RUN mvn dependency:go-offline  //download dependencies
 COPY src ./src
-RUN mvn package -DskipTests     //builds the application and creates a jar file in the target directory
+RUN mvn clean package -DskipTests     //builds the application and creates a jar file in the target directory
+RUN ls -l /build/target
 
 FROM eclipse-temurin:21-jre-alpine 
 WORKDIR /app
